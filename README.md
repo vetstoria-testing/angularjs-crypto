@@ -1,28 +1,9 @@
 [angularjs-crypto](http://ngmodules.org/modules/angularjs-crypto)  
 ==================
-[![Build Status](https://travis-ci.org/pussinboots/angularjs-crypto.svg?branch=master)](https://travis-ci.org/pussinboots/angularjs-crypto)
-[![Coverage Status](https://img.shields.io/coveralls/pussinboots/angularjs-crypto.svg)](https://coveralls.io/r/pussinboots/angularjs-crypto?branch=master)
-[![Dependencies](https://david-dm.org/pussinboots/angularjs-crypto.png)](https://david-dm.org/pussinboots/angularjs-crypto)
-[![Heroku](http://heroku-badge.herokuapp.com/?app=angularjs-crypto&style=flat)](https://angularjs-crypto.herokuapp.com/)
-[![Unit Tests](https://unitcover.herokuapp.com/api/pussinboots/angularjs-crypto/badge)](https://unitcover.herokuapp.com/#/builds/pussinboots/angularjs-crypto/builds)
-[![Codio](https://d2g7ua7d94r3fl.cloudfront.net/assets/images/8aa866ae.codio_logo.png)](https://codio.com/pussinboots/angularjs-crypto)
-
-[![Gitter chat](https://badges.gitter.im/pussinboots/angularjs-crypto.png)](https://gitter.im/pussinboots/angularjs-crypto)
-
-[![Test Results](http://unitcover.herokuapp.com/api/pussinboots/angularjs-crypto/testsuites/badge)](http://unitcover.herokuapp.com/#/builds/pussinboots/angularjs-crypto/builds)
 
 AngularJS Module that integrate cryptography functionality offers from the [crypto-js](https://code.google.com/p/crypto-js/) project for all http requests and response.
 
 Inprogress update to the new angularjs version but before protractor migration.
-
-## Demo Application
-
-There is demo application that use this library to demonstrate the client side encryption and storing that encrypted data on a server. Retrieve this data back and decrypt on the client side to display the data.
-
-[Demo](https://secure-notes.herokuapp.com)
-
-[Source Code](https://github.com/pussinboots/secure-notes)
-
 
 ## Versions
 
@@ -43,13 +24,6 @@ Dependencies
 - [AngularJS 1.1.4 + ](http://angularjs.org/) (tested with 1.1.4, 1.2.16, 1.2.28, 1.3.13)
 - [Crypto-js 3.1.2 AES modul](https://raw.githubusercontent.com/pussinboots/angularjs-crypto/master/public/js/cryptojs/rollups/aes.js)
 - [Crypto-js 3.1.2 ecb mode](https://raw.githubusercontent.com/pussinboots/angularjs-crypto/master/public/js/cryptojs/components/mode-ecb.js)
-
-## Bower Versions
-
-- 0.0.3 : support all ciphers that are supported by CryptoJS
-- 0.0.4 : support decryption of encoded reponse body
-- 1.2.0 : use it for 1.14 + and 1.2.x version of angularjs
-- 1.3.0 : use for angularjs 1.3.x
 
 ## Development
 
@@ -84,19 +58,6 @@ repo: defined the following github repo like https://github.com/pussinboots/vagr
 folder: is only information for the Developer that will pe display before vagrant startup so that he or sher knows where the angularjs-crypto project root folder can be found.
 
 deps: defined the dependencies to be installed during vagrant provision.
-
-
-
-## Install (bower)
-
-* bower install angularjs-crypto
-* js file is under the [bower_components/]angularjs-crypto/public/js/lib/angularjs-crypto.js
-```html
-<script type='text/javascript' src="[bower_components/]angularjs-crypto/public/js/lib/plugins/CryptoJSCipher.js"></script>
-<script type='text/javascript' src="[bower_components/]angularjs-crypto/public/js/lib/angularjs-crypto.js"></script>
-<script type='text/javascript' src="[bower_components/]angularjs-crypto/public/js/cryptojs/rollups/aes.js"></script>
-<script type='text/javascript' src="[bower_components/]angularjs-crypto/public/js/cryptojs/components/mode-ecb.js"></script>
-```
 
 ## Install (manual)
 
@@ -329,15 +290,6 @@ With this html snippet you can edit the key to use only locally.
 <input type="text" ng-model="$root.base64Key" />
 ```
 
-Example App
--------------
-
-Setup a simple example app that use mongodb as persistence layer for storing encrypted data.
-
-[Github](https://github.com/pussinboots/secure-notes)
-
-[Live](https://secure-notes.herokuapp.com)
-
 Demo
 -------------
 
@@ -357,58 +309,6 @@ The http calls are mocked with angular-mock.
 [Complete body encoding](http://angularjs-crypto.herokuapp.com/#/fullbody)
 
 [Change base64Key Example](http://angularjs-crypto.herokuapp.com/#/key)
-
-local
-------
-
-Two ways to run the demo app local one with play or second with nodejs.
-
-Dependencies
-* play 2.2.3 (optional)
-* nodejs 0.10.28
-* [karma-test runner](http://karma-runner.github.io/0.12/intro/installation.html)
-
-Start it with play
-
-    play run
-    
-Then go to
-* [Get Example](http://localhost:9000/#/get)
-* [Post Example](http://localhost:9000/#/post)
-* [Http Get query parameters encoding ](http://localhost:9000/#/query)
-* [Change base64Key Example](http://localhost:9000/#/key)
-* [Complete query encoding](http://localhost:9000/#/fullquery)
-* [Complete body encoding](http://localhost:9000/#/fullbody)
-
-Start it with nodejs
-
-    node server.js
-    
-
-Then go to
-* [Get Example](http://localhost:9000/#/get)
-* [Post Example](http://localhost:9000/#/post)
-* [Http Get query parameters encoding ](http://localhost:9000/#/query)
-* [Change base64Key Example](http://localhost:9000/#/key)
-* [Complete query encoding](http://localhost:9000/#/fullquery)
-* [Complete body encoding](http://localhost:9000/#/fullbody)
-
-Or run the karma test local with 
-
-  npm test
-
-Description
--------------
-
-This angularjs module is part of the [bankapp](https://github.com/pussinboots/bankapp).
-The idea is to store encrypted data in a backend and decode it on the client side so that the backend 
-doesn't know what kind of data it stores only the angularjs client and the storage process know the 
-plain data.
-
-If you have question or want to take of the development than write me a mail at pussinboots666@googlemail.com.
-
-It is a very young project but with the support of wide open source tools like karma and travis it
-will flow soon i hope.
 
 License
 --------------
